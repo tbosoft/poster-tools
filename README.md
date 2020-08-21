@@ -4,22 +4,18 @@
 ## 详细文档
 ## 新版功能更丰富
 * 基于 java 开发，部署和二次开发更方便
-* 图片将上传到 公共 CDN，不占用主机磁盘，且速度更快
+* 图片可以上传到 公共 CDN，不占用主机磁盘，且速度更快
 
 
 ## 组件参数解释
 
-### config字段
+### Posterconfig字段
 
 | 字段            | 类型                     | 必填 | 描述                                       |
 | --------------- | ------------------------ | ---- | ------------------------------------------ |
 | width           | Number(单位:px)          | 是   | 画布宽度                                   |
 | height          | Number(单位:px)          | 是   | 画布高度                                   |
-| backgroundColor | String                   | 否   | 画布颜色                                   |
-| blocks          | Object Array（对象数组） | 否   | 看下文                                     |
-| texts           | Object Array（对象数组） | 否   | 看下文                                     |
-| images          | Object Array（对象数组） | 否   | 看下文                                     |
-| lines           | Object Array（对象数组） | 否   | 看下文                                     |
+| backgroundColor | String                   | 否   | 画布颜色                                   |                                |
 
 ### blocks字段
 
