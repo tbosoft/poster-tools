@@ -1,8 +1,38 @@
 # poster-tools
 海报SDK
 
-## 详细文档
-## 新版功能更丰富
+## 使用方法
+1. 引入dynamic-datasource-spring-boot-starter。
+
+```xml
+<dependency>
+  <groupId>com.github.tbosoft</groupId>
+  <artifactId>poster-tools</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+2. 使用代码
+```java
+PosterConfig config  = new PosterConfig();
+config.setBackgroundColor("xxx");
+config.setHeight(xx);
+config.setWidth(xx);
+
+QiniuConfig qiniuConfig = new QiniuConfig();
+qiniuConfig.setDomain("xx");
+qiniuConfig.setAccess("xx");
+qiniuConfig.setBucket("xx");
+qiniuConfig.setSecret("xx");
+qiniuConfig.setPrefix("xx");
+
+Uploader uploader = new QiniuUploader(qiniuConfig);
+PosterManager poster = new PosterManager(config,uploader);
+List<Drawable> drawList = Lists.newArrayList();
+// drawList.add(XXX)
+//需要绘制什么就自定义添加进行
+Result result = poster.getPoster(drawList);
+```
+## 功能介绍
 * 基于 java 开发，部署和二次开发更方便
 * 图片可以上传到 公共 CDN，不占用主机磁盘，且速度更快
 
