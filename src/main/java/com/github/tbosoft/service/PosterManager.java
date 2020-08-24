@@ -61,7 +61,7 @@ public final class PosterManager {
      * @throws IOException
      */
 
-    public Result getPoster(List<Drawable> drawList) {
+    public CreateResult getPoster(List<Drawable> drawList) {
 
         try {
             // 初始化图片
@@ -101,7 +101,7 @@ public final class PosterManager {
             File file = File.createTempFile(Md5.md5(drawList.toString().getBytes()), "." + posterConfig.getFormat());
             ImageIO.write(image, posterConfig.getFormat(), file); // 把文件写入图片
             file.deleteOnExit(); // 使用完后删除文件
-            Result result = new CreateResult(file);
+            CreateResult result = new CreateResult(file);
             //上传服务器
             if (yunUploader != null) {
                 result = yunUploader.upload(file);
