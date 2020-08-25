@@ -35,7 +35,7 @@ Result result = poster.getPoster(drawList);
 ## 功能介绍
 * 基于 java 开发，部署和二次开发更方便
 * 图片可以上传到 公共 CDN，不占用主机磁盘，且速度更快
-
+* 支持自定义字体，运行目录下新建 fonts 文件夹，里面放 ttf 格式字体就行。
 
 ## 组件参数解释
 
@@ -80,6 +80,7 @@ Result result = poster.getPoster(drawList);
 | textAlign      | String           | 否   | left\|center\|right对齐方式                                  |
 | index          | Int              | 否   | 层级，越大越高                                               |
 | font           | String           | 否   | 默认字体为'pingfangtf' ，支持自定义字体      |
+| systemFont     | boolean          | 否   | 设置字体，指定是否为系统字体还是自传字体文件字体      |
 
 ### images字段
 
