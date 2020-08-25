@@ -78,8 +78,8 @@ Result result = poster.getPoster(drawList);
 | width          | Number(单位:px) | 否   | 没有指定为画布宽度，默认为x轴右边所有宽度                                           |
 | baseLine       | String           | 否   | top\| middle\|bottom基线对齐方式                             |
 | textAlign      | String           | 否   | left\|center\|right对齐方式                                  |
-| index         | Int              | 否   | 层级，越大越高                                               |
-| fontFamily     | String           | 否   | 默认字体为'pingfangtf' ，支持自定义字体      |
+| index          | Int              | 否   | 层级，越大越高                                               |
+| font           | String           | 否   | 默认字体为'pingfangtf' ，支持自定义字体      |
 
 ### images字段
 
