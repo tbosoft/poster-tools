@@ -80,7 +80,8 @@ Result result = poster.getPoster(drawList);
 | textAlign      | String           | 否   | left\|center\|right对齐方式                                  |
 | index          | Int              | 否   | 层级，越大越高                                               |
 | font           | String           | 否   | 默认字体为'pingfangtf' ，支持自定义字体      |
-| systemFont     | boolean          | 否   | 设置字体，指定是否为系统字体还是自传字体文件字体      |
+| bold           | boolean          | 否   | 默认false ，设置为粗体     |
+| systemFont     | boolean          | 否   | 默认true 设置font后默认为系统自带字体，设置为false后需要配置字体文件   |
 
 ### images字段
 
