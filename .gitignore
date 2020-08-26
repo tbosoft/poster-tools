@@ -16,6 +16,7 @@
 *.iml
 *.ipr
 
+
 ### NetBeans ###
 /nbproject/private/
 /build/
@@ -26,4 +27,5 @@
 
 ### 自定义 ###
 /log/
+/src/test/
 

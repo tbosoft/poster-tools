@@ -45,6 +45,6 @@ public class QiniuUploader implements Uploader {
             return CreateResult.fail(response.error);
         }
 
-        return new CreateResult(config.getDomain() + filepath,file);
+        return new CreateResult(config.getDomain() + filepath);
     }
 }

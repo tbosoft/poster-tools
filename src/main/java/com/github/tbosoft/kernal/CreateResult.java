@@ -9,7 +9,7 @@ import java.io.File;
 public class CreateResult extends JsonAble implements Result {
     private  String url;
     private String msg;
-    private File poster;
+    private String filePath;
 
     public CreateResult(String url) {
         this.url = url;
@@ -17,19 +17,12 @@ public class CreateResult extends JsonAble implements Result {
     }
 
 
-    public CreateResult(String url, String msg) {
-        this.url = url;
-        this.msg = msg;
-    }
-    public CreateResult(File file){
-        this.poster = file;
-        this.msg = Result.SUCCESSFUL;
-    }
-    public CreateResult(String url,File file){
-        this.poster = file;
+    public CreateResult(String url,String filePath) {
+        this.filePath = filePath;
         this.url = url;
         this.msg = Result.SUCCESSFUL;
     }
+
 
     public static CreateResult fail(String msg) {
         return new CreateResult(null, msg);
