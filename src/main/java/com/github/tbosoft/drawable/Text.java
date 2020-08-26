@@ -27,7 +27,7 @@ public class Text extends Drawable {
 
     static Map<String, Font> drawFonts = new HashMap<>();
 
-    public static Font getDrawFont(String name, Integer fontSize,boolean systemFont) {
+    public static Font getDrawFont(String name, Integer fontSize,boolean systemFont,boolean bold) {
         if(StringUtils.isNotEmpty(name) && !systemFont){
             Font tempFont = drawFonts.get(name);
             if (tempFont == null) {
@@ -45,12 +45,12 @@ public class Text extends Drawable {
             }
         }
 
-        return new Font("".equals(name)?DEFAULT_FONT:name, Font.PLAIN, fontSize);
+        return new Font("".equals(name)?DEFAULT_FONT:name, bold?Font.BOLD:Font.PLAIN, fontSize);
     }
 
     @Override
     public void draw(Graphics2D gd, int posterWidth, int posterHeight) {
-        Font drawFont = getDrawFont(font, fontSize,systemFont);
+        Font drawFont = getDrawFont(font, fontSize,systemFont,bold);
 
         // 设置字体和颜色
         gd.setFont(drawFont);
@@ -224,6 +224,11 @@ public class Text extends Drawable {
      * 是否是系统字体
      */
     private boolean systemFont = true;
+
+    /**
+     * 字体加粗
+     */
+    private boolean bold = false;
 
     private String textAlign = "left"; // 文本对齐方式
     private String font; // 字体
