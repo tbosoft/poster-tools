@@ -166,10 +166,8 @@ public class ResourceUtils {
      *            要截取的高度
      * @throws IOException */
 
-    public static BufferedImage zoomOutImage(BufferedImage srcImage, int width, int hight)
-            throws IOException
+    public static BufferedImage zoomOutImage(BufferedImage srcImage, int width, int hight) throws IOException
     {
-        int maxHight = 1360; // 设置最大的图片高度;
 
 
 
@@ -208,18 +206,9 @@ public class ResourceUtils {
             {
                 // 计算 X轴坐标
                 int x = 0;
+                int y = h / 2 - hight / 2;
+                return saveSubImage(srcImage, new Rectangle(x, y, width, hight));
 
-                // 如果图片超过指定高度则截取一定的高度
-                if (h >= maxHight )
-                {
-                    int y = h / 2 - hight / 2;
-                    return saveSubImage(srcImage, new Rectangle(x, y, width, maxHight));
-                }
-                else
-                {
-                    int y = h / 2 - hight / 2;
-                    return saveSubImage(srcImage, new Rectangle(x, y, width, hight));
-                }
 
             }
             // 否则如果是缩放后的图像的高度和要求的图像高度一样，就对缩放后的图像的宽度进行截取
