@@ -110,7 +110,7 @@ public final class PosterManager {
             return result;
 
         } catch (IOException e) {
-            return CreateResult.fail("create error");
+            return CreateResult.fail("create error:"+e.getMessage());
         }
 
     }

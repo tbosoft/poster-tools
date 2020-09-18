@@ -156,6 +156,7 @@ public class Text extends Drawable {
         int fullTextWidth = getWordWidth(drawFont, surplus);
         // 如果是最后一行且溢出且需要省略号，则预留省略号宽度
         textWidth = fullTextWidth > textWidth && lastLine && ellipsis ? textWidth - getWordWidth(drawFont, "...") : textWidth;
+        textWidth = textWidth < 0 ? 0 : textWidth;
 
         // 默认值,后面试用循环不断调整为最佳值
         int lineIndex = surplus.length() - (fullTextWidth - textWidth) / fontSize;
